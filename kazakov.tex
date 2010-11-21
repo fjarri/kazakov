@@ -277,6 +277,32 @@
 \hyphenation{ma-ga-zine}
 \hyphenation{eu-ro-news}
 
+% Cover page
+% Not a very good layout, but it is better than nothing
+\newcommand{\coverimage}[1]{\noindent\includegraphics[width=#1\textwidth]{cover.jpg}}
+\newcommand{\firstcoverline}[1]{ {\noindent \fontsize{#1}{#1}\selectfont\textbf{Вселенная}} }
+\newcommand{\secondcoverline}[1]{ {\noindent \fontsize{#1}{#1}\selectfont\textbf{Александра Казакова}} }
+
+\extratitle{
+\vfill
+\switch
+\case{\isAFour}
+	\firstcoverline{36pt}
+	\vskip 0.5\baselineskip
+	\secondcoverline{36pt}
+	\vskip 2\baselineskip
+\case{\isIPad}
+	\firstcoverline{36pt}
+	\vskip 0.5\baselineskip
+	\secondcoverline{36pt}
+	\vskip 2\baselineskip
+\case{\isSevenInches}
+	\firstcoverline{18pt}\secondcoverline{18pt}
+	\vskip 0.5\baselineskip
+\endswitch
+\coverimage{1}
+}
+
 % title
 \date{}
 \title{Вселенная Александра Казакова}
